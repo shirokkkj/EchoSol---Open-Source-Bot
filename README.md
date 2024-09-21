@@ -13,7 +13,7 @@ EchosSol é um bot criado por **yuchironozora**, com o intuito de ajudar a comun
 
 - **Econômicos**: `pay`, `work`, `balance`, `dep` e, futuramente, muito mais.
 - **Administrativos**: `ban`, `kick`, `unban`, `mute`, `unmute`.
-- **Controle geral**: `purge`, `send embeds` e outros.
+- **Controle geral**: `purge`, `send embeds`, `tickets` e outros.
 
 Esses comandos citados são apenas uma parcela dos comandos que EchosSol englobará. Afinal, ele ainda está na versão **0.1**, e futuramente, com a vinda de novas versões, se tornará um dos bots mais completos **Open Source** do Discord.
 
