@@ -1,4 +1,4 @@
-![EchoSol Banner](https://imgur.com/a/NdQJF2i)
+![EchoSol Banner](https://i.imgur.com/am2iFn6.jpeg)
 
 
 # EchosSol
