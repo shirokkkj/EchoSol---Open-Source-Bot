@@ -1,3 +1,6 @@
+![EchoSol Banner](https://imgur.com/a/NdQJF2i)
+
+
 # EchosSol
 
 EchosSol é um bot criado por **yuchironozora**, com o intuito de ajudar a comunidade de criação de bots de Discord que usam a linguagem de programação Python. Ele engloba todos os comandos necessários para um bot multiuso e funcional, como:
