@@ -1,3 +1,16 @@
+# Nota de Update -- Versão 0.15
+- Correção de bugs no Daily e Work
+- Adição da fase BETA da funcionalidade de Tickets
+- Criação da roleta e da rinha de galo ( Roleta ainda não concluída )
+
+  **Em caso de Bugs ou má funcionalidade de algum desses, contatar `yuchironozora`, no Discord.
+
+
+
+
+
+## DOCUMENTATION
+
 ![EchoSol Banner](https://i.imgur.com/am2iFn6.jpeg)
 
 
