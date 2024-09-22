@@ -27,6 +27,10 @@ async def sync_commands():
 async def on_ready():
     await bot.tree.sync()  # Sincroniza os slash commands
     print(f"Bot conectado como {bot.user}")
+    
+@bot.tree.command(name='resetcogs', description='foda-se')
+async def resetcogs(interaction: discord.Interaction):
+    await load_cogs()
 
 # Carrega os módulos (cogs) dinamicamente
 loaded_cogs = []

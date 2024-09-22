@@ -30,7 +30,7 @@ class RegistrationUser(commands.Cog):
 
     @app_commands.command(name="register_economy", description="Registre-se na economia do servidor.")
     async def register_economy(self, interaction: discord.Interaction):  # Renomeado
-        cursor.execute(f'INSERT INTO members (id_discord, current_balance) VALUES(%s, %s)', (interaction.user.id, 0))
+        cursor.execute(f'INSERT INTO members (id_discord, current_balance, date_daily, work_date) VALUES(%s, %s, %s, %s)', (interaction.user.id, 0, '0', '0'))
         connection.commit()
         
         embed_model = EmbedsModel(title=':white_check_mark: Registro feito', description='Agora você já faz parte da nossa economia.', color=0x00ff00)

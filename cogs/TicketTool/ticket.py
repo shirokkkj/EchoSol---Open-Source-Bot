@@ -41,6 +41,7 @@ class CreateTicket(commands.Cog):
             
             async def callback_create_chat(interaction: discord.Interaction):
                 try:
+                    print(interaction.user.mention)
                     discord_category = discord.utils.get(interaction.guild.categories, name='CURIO')
                     
                     ticket_channel = await interaction.guild.create_text_channel(category=discord_category, name=f'ticket-{interaction.user.name}')
@@ -65,9 +66,7 @@ Agradecemos pela paciência e colaboração! 😊
                     await interaction.response.send_message(f'Ticket ticket-{interaction.user.name} has been created > {ticket_channel.mention}')
                 except Exception as e:
                     print(e)
-                    
-
-                
+            print(interaction.user.mention)
             view_ticket = discord.ui.View()
             
             button = discord.ui.Button(label='Criar ticket', style=discord.ButtonStyle.green)

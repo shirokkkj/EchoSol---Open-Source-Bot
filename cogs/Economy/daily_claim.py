@@ -47,8 +47,12 @@ class Daily(commands.Cog):
             connection.commit()
             
         def update_date_daily():
-            cursor.execute(f'UPDATE members SET date_daily = "{datetime.datetime.now().hour}" WHERE (id_discord = {str(interaction.user.id)})')
-            connection.commit()
+            try:
+                cursor.execute(f'UPDATE members SET date_daily = "{datetime.datetime.now().hour}" WHERE (id_discord = {str(interaction.user.id)})')
+                connection.commit()
+                print('FUNCIONOU SEU MERDA DO CARALHO')
+            except Exception as e:
+                print(e)
         
         def get_current_balance():
             cursor.execute(f'SELECT current_balance FROM members WHERE (id_discord = {str(interaction.user.id)})')
@@ -58,8 +62,9 @@ class Daily(commands.Cog):
         try:
             
             choosed_value = choice(possible_values)
+            print(get_current_date() != '0')
             
-            if not get_current_date() == None:
+            if int(get_current_date()) != 0:
                 if datetime.datetime.now().hour - int(get_current_date()) < 24:
                     embed_model = EmbedsModel(title='Apressadinho você, não é...?', description='Você ainda não pode resgatar o seu daily, somente amanhã.', color=0xff0000)
                     embed = embed_model.CreateEmbed()
