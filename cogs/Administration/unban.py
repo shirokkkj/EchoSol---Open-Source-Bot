@@ -8,7 +8,7 @@ class Unban(commands.Cog):
         self.bot = bot
 
     @app_commands.command(name="unban", description="Desbane um usuário do servidor")
-    async def ban(self, interaction: discord.Interaction, member: discord.Member, reason: str = ''):
+    async def ban(self, interaction: discord.Interaction, member: discord.User, reason: str = ''):
          
         if not interaction.user.guild_permissions.ban_members:
             await interaction.response.send_message('**Você não tem permissão para fazer isto!**')

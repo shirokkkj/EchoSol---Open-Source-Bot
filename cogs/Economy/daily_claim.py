@@ -52,7 +52,6 @@ class Daily(commands.Cog):
         
         def get_current_balance():
             cursor.execute(f'SELECT current_balance FROM members WHERE (id_discord = {str(interaction.user.id)})')
-                
             current_balance = cursor.fetchone()[0]
             
             return current_balance
@@ -64,27 +63,28 @@ class Daily(commands.Cog):
                 if datetime.datetime.now().hour - int(get_current_date()) < 24:
                     embed_model = EmbedsModel(title='Apressadinho você, não é...?', description='Você ainda não pode resgatar o seu daily, somente amanhã.', color=0xff0000)
                     embed = embed_model.CreateEmbed()
+                    
                     await interaction.response.send_message(embed=embed)
                     return
                 
             cursor.execute(f'SELECT current_balance FROM members WHERE (id_discord = {str(interaction.user.id)})')
-            
             result = cursor.fetchone()
             
             if result:
                 update_balance()
-                
                 update_date_daily()
             
                 current_balance = get_current_balance()
             else:
                 embed_model = EmbedsModel(title='Você precisa se registrar!', description='Antes de usufruir da economia, faça o seu registro!', color=0xff0000)
                 embed = embed_model.CreateEmbed()
+                
                 await interaction.response.send_message(embed=embed)
                 return
 
             embed_model = EmbedsModel(title='💸 Daily', description=f'Parabéns! Você recebeu exatos: {choosed_value} EchosSolaris. Atualmente você tem {current_balance} EchosSolares', color=0x00ff00)
             embed = embed_model.CreateEmbed()
+            
             await interaction.response.send_message(embed=embed)
             
             
