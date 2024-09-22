@@ -3,13 +3,13 @@
 - Adição da fase BETA da funcionalidade de Tickets
 - Criação da roleta e da rinha de galo ( Roleta ainda não concluída )
 
-  **Em caso de Bugs ou má funcionalidade de algum desses, contatar `yuchironozora`, no Discord.
+**Em caso de Bugs ou má funcionalidade de algum desses, contatar `yuchironozora`, no Discord.**
 
 
 
 
 
-## DOCUMENTATION
+# DOCUMENTATION
 
 ![EchoSol Banner](https://i.imgur.com/am2iFn6.jpeg)
 
